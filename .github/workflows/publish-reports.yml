@@ -34,6 +34,26 @@ jobs:
         # must be executable BEFORE 'quarto render' runs, or the build will fail.
         run: chmod +x _scripts/link-pdfs.sh
 
+      # Install Fonts to System
+      - name: Install Custom Fonts
+        run: |
+          # 1. Install fontconfig (usually present, but ensures fc-cache works)
+          sudo apt-get update && sudo apt-get install -y fontconfig
+
+          # 2. Create local font directory
+          mkdir -p ~/.local/share/fonts
+
+          # 3. Copy ALL fonts from your extension assets to system fonts
+          # We use recursive copy (-r) to handle subfolders like 'montserrat/'
+          cp -r _extensions/lirneasia/assets/fonts/* ~/.local/share/fonts/
+
+          # 4. Update font cache and verify
+          fc-cache -fv
+          
+          # Debug: Check if 'Sorts Mill Goudy' is found
+          echo "Checking for Sorts Mill Goudy..."
+          fc-list | grep "Sorts Mill Goudy" || echo "⚠️ Font not found in fc-list"
+
       - name: Debug - Check Font File Size
         run: |
           echo "Checking size of a Montserrat font file..."
