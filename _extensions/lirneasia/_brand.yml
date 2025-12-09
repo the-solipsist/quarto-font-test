@@ -32,7 +32,7 @@ typography:
     - family: Sorts Mill Goudy
       source: file
       files:
-        - path: /tmp/test/_extensions/lirneasia/assets/fonts/sortsmillgoudy/SortsMillGoudy-Regular.ttf
+        - path: assets/fonts/sortsmillgoudy/SortsMillGoudy-Regular.ttf
     - family: Montserrat
       source: file
       files:
