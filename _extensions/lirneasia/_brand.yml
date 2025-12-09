@@ -29,12 +29,16 @@ typography:
   fonts:
     - family: Sarabun
       source: google
-    - family: "Sorts Mill Goudy"
-      source: google
+    - family: Sorts Mill Goudy
+      source: file
+      files:
+        - path: /tmp/test/_extensions/lirneasia/assets/fonts/sortsmillgoudy/SortsMillGoudy-Regular.ttf
     - family: Montserrat
-      source: google
+      source: file
+      files:
+        - path: assets/fonts/montserrat/Montserrat-Regular.ttf
   base:
-    family: "Sorts Mill Goudy"
+    family: Sorts Mill Goudy
     size: 12pt
   headings:
     family: Montserrat

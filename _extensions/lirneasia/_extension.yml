@@ -7,10 +7,10 @@ contributes:
     project:
       brand: _brand.yml
   formats:
-    typst:
-      template-partials:
-        - typst-template.typ
-        - typst-show.typ
-        - page.typ
+    typst: default
+#      template-partials:
+#        - typst-template.typ
+#        - typst-show.typ
+#        - page.typ
 #      format-resources:
 #        - assets/logos

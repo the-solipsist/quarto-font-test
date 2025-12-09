@@ -3,10 +3,10 @@ project:
   render:
     - "country/*/*.qmd"
 # 6. Format Settings
-bibliography: shared/d4dasia-bib.json
+#bibliography: shared/d4dasia-bib.json
 #csl: shared/chicago-shortened-notes-bibliography-subsequent-author.csl
 #reference-section-title: References
-citeproc: true
+citeproc: false
 
 format:
   lirneasia-typst:
